@@ -1,0 +1,19 @@
+---
+layout: default
+title: Home
+---
+
+{% assign tmp = "/" | append: site.baseurl %}
+{% if page.url == tmp or page.url == "/" %}
+    <article>
+        <h1 class="top-text"></h1>
+        <p style="text-align: justify;">Hola!. <b>Devnauts</b> es un espacio sobre diseño/desarrollo web nacido en 2017. Este sitio funciona como un <a href="https://github.com/devnauts">repositorio</a> de mis proyectos y artículos basados en mi aprendizaje diario. Soy un entusiasta del software libre y el desarrollo de código abierto, amante del café, los videojuegos y el chiptune.</p>
+        <p style="text-align: justify;"><b>Devnauts</b> esta gestionado con <a href="https://jekyllrb.com/">Jekyll</a> (Generador de sitios estáticos) y alojado de forma gratuita en <a href="https://github.com/">Github</a>. Si quieres tener algo parecido puedes leer la siguiente <a href="#">entrada</a>.</p>
+    </article>
+    <div class="divider"></div>
+    <h1 class="top-text">+ Publicaciones</h1>
+    {% include postlist.html %}
+{% else %}
+    <h1 class="top-text">+ Publicaciones</h1>
+    {% include postlist.html %}
+{% endif %}
